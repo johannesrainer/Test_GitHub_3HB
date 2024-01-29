@@ -6,14 +6,26 @@ public class Group {
 	
 	ArrayList<Shape> shapes= new ArrayList<Shape>();
 	
+	/**
+	 * adds a body to the list of all bodies
+	 * @param shape
+	 */
 	public void addShape(Shape shape) {
 		this.shapes.add(shape);
 	}
 	
+	/**
+	 * removes a body from the list of all bodies
+	 * @param shape
+	 */
 	public void removeShape(Shape shape) {
 		this.shapes.remove(shape);
 	}
 	
+	/**
+	 * calculates the overall area of all bodies
+	 * @return
+	 */
 	public double overallArea() {
 		double area = 0;
 		for(Shape s : this.shapes) {
@@ -22,6 +34,10 @@ public class Group {
 		return area;
 	}
 	
+	/**
+	 * calculates the overall circumference of all bodies
+	 * @return
+	 */
 	public double overallCircumfence() {
 		double circumference = 0;
 		for(Shape s : this.shapes) {
@@ -30,6 +46,10 @@ public class Group {
 		return circumference;
 	}
 	
+	/**
+	 * prints the biggest body
+	 * @return
+	 */
 	public double biggestArea() {
 		double max = 0;
 
@@ -42,14 +62,13 @@ public class Group {
 		return max;
 	}
 	
+	/**
+	 * prints all shapes
+	 */
 	public void printAll() {
 		for(Shape s : shapes) {
 			System.out.println(s);
 		}
 	}
 	
-	
-	
-	
-
 }
