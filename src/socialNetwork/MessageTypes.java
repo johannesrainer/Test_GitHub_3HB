@@ -1,6 +1,7 @@
 package socialNetwork;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 public class MessageTypes {
@@ -55,6 +56,27 @@ public class MessageTypes {
 
 	public void setComments(ArrayList<Comment> comments) {
 		this.comments = comments;
+	}
+	
+	public void addLike() {
+		this.amountOfLikes +=1;
+	}
+	
+	public void removeLike() {
+		this.amountOfLikes -=1;
+	}
+	
+	public void createComment(Comment c) {
+		this.comments.add(c);
+	}
+	
+	public void removeComment(Comment c) {
+		this.comments.remove(c);
+	}
+	
+	public void calculateTimeSpan() {
+		Period timeSpan = Period.between(timestamp, LocalDate.now());
+		System.out.println(timeSpan);
 	}
 
 }
