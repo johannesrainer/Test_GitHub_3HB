@@ -27,6 +27,14 @@ public class NewsFeed {
 			System.out.println(s);
 		}
 	}
+	
+	public void removeSubmissionFromUser(String author) {
+		for(MessageTypes s : this.newsfeed) {
+			if(s.getAuthorUsername().equals(author)) {
+				this.newsfeed.remove(s);
+			}
+		}
+	}
 
 	
 }
