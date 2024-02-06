@@ -75,7 +75,8 @@ public class MessageTypes {
 	 * creates a Comment
 	 * @param c
 	 */
-	public void createComment(Comment c) {
+	public void createComment(String user, String message) {
+		Comment c = new Comment(user, message);
 		this.comments.add(c);
 	}
 	
@@ -88,11 +89,10 @@ public class MessageTypes {
 	}
 	
 	/**
-	 * calculates the Timespan
+	 * calculates the timespan
 	 */
 	public void calculateTimeSpan() {
-		Period timeSpan = Period.between(timestamp, LocalDate.now());
-		System.out.println(timeSpan);
+		
 	}
 	
 	@Override

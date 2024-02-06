@@ -4,7 +4,12 @@ import java.util.ArrayList;
 
 public class NewsFeed {
 	
-	ArrayList<MessageTypes> newsfeed = new ArrayList<MessageTypes>();
+	ArrayList<MessageTypes> newsfeed;
+	
+	public NewsFeed() {
+		this.newsfeed = new ArrayList<MessageTypes>();
+	}
+	
 	/**
 	 * adds a Submisssion to the ArrayList newsfeed
 	 * @param s
