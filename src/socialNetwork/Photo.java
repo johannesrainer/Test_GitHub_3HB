@@ -27,5 +27,11 @@ public class Photo extends MessageTypes {
 	public void setHeadline(String headline) {
 		this.headline = headline;
 	}
+
+	@Override
+	public String toString() {
+		return "Photo [fileName=" + fileName + ", headline=" + headline + "]";
+	}
+	
 	
 }
