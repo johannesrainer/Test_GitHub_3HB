@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MusicalChair {
 
@@ -47,4 +48,19 @@ public class MusicalChair {
 		((LinkedList<String>) this.names).removeLast();
 	}
 	
+public String play() {
+		if(!this.names.isEmpty()) {
+			while(this.names.size() > 1) {
+				int num = ThreadLocalRandom.current().nextInt();
+				this.rotateAndRemoveLast(num);
+				System.out.println("Im rennen sind noch: "+ this.toString());
+				
+			}
+			System.out.println("Der Gewinner ist:"+this.toString());
+			return this.toString();
+		}
+		
+		
+	}
+
 }
