@@ -1,43 +1,45 @@
 package stack;
 
-import java.util.Stack;
+import java.util.LinkedList;
+
 
 public class CorrectClamping {
 
     public static boolean isValid(String input) {
-        Stack<Character> bracketsStack = new Stack<>();
+        LinkedList<Character> stack = new LinkedList<>();
 
-        for (char sign : input.toCharArray()) {
-            if (sign == '(' || sign == '{' || sign == '[') {
-                bracketsStack.push(sign);
-            } else if (sign == ')' || sign == '}' || sign == ']') {
-                if (bracketsStack.isEmpty()) {
+        for (char c : input.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } else if (c == ')' || c == '}' || c == ']') {
+                if (stack.isEmpty()) {
                     return false;
                 }
 
-                char lastOpener = bracketsStack.pop();
+                char lastOpener = stack.peek();
 
-                if (lastOpener == '(' && sign != ')') {
-                    return false;
-                } else if (lastOpener == '{' && sign != '}') {
-                    return false;
-                } else if (lastOpener == '[' && sign != ']') {
+                if ((lastOpener == '(' && c != ')') ||
+                		(lastOpener == '{' && c != '}') ||
+                		(lastOpener == '[' && c != ']')) {
                     return false;
                 }
+            	stack.pop();
             }
         }
 
-        return bracketsStack.isEmpty();
+        return stack.isEmpty();
     }
 
     public static void main(String[] args) {
         String ausdruck = "(a + b) * (c - d)";
+        //	String ausdruck2 = "([{]})";
         
         if(isValid(ausdruck) == true) {
         	System.out.println("Korrekte Klammerung!");
         } else {
         	System.out.println("Fehlerhafte Klammerung!");
         }
+        
     }
 }
 
