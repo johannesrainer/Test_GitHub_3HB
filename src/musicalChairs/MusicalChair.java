@@ -48,7 +48,7 @@ public class MusicalChair {
 		((LinkedList<String>) this.names).removeLast();
 	}
 	
-public String play() {
+public void play() {
 		if(!this.names.isEmpty()) {
 			while(this.names.size() > 1) {
 				int num = ThreadLocalRandom.current().nextInt();
@@ -57,7 +57,8 @@ public String play() {
 				
 			}
 			System.out.println("Der Gewinner ist:"+this.toString());
-			return this.toString();
+			//return this.toString();
+			
 		}
 		
 		
