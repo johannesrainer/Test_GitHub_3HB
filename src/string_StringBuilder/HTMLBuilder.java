@@ -1,4 +1,4 @@
-package String_StringBuilder;
+package string_StringBuilder;
 
 public class HTMLBuilder {
 

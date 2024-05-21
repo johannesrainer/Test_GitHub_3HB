@@ -1,5 +1,5 @@
 
-package String_StringBuilder;
+package string_StringBuilder;
  
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
