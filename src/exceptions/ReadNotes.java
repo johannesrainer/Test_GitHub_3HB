@@ -34,9 +34,5 @@ public class ReadNotes {
 		} catch (IOException e) {
 			System.err.println("Datei konnte nicht geöffnet werden: " + e.getMessage());
 		}
-		
-		
 	}
-	
-	
 }
