@@ -7,12 +7,12 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		MessageTypes m1 = new Message("Paul", "Moin!");
-		MessageTypes m2 = new Photo("Luca", "Test_1", "David");
-		NewsFeed n1 = new NewsFeed();
+		//MessageTypes m1 = new Message("Paul", "Moin!");
+		//MessageTypes m2 = new Photo("Luca", "Test_1", "David");
+		//NewsFeed n1 = new NewsFeed();
 		
 		/*m1.addLike();
-		m2.createComment("David", "Du Süßer");
+		m2.createComment("David", "Du Sï¿½ï¿½er");
 		n1.addSubmission(m1);
 		n1.addSubmission(m2);
 		n1.printAllSubmissions();
